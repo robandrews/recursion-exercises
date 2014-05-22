@@ -24,3 +24,20 @@ def iter_sum(arr):
     return total
     
 # print iter_sum([1,2,3,4])
+
+def primes_arr(n):
+    i = 2
+    arr = []
+    while len(arr) < n:
+        if is_prime(i):
+            arr.append(i)
+        i += 1
+    return arr
+    
+def is_prime(num):
+    for n in range(2, num):
+        if num % n == 0:
+            return False
+    return True
+        
+# print primes_arr(10)
