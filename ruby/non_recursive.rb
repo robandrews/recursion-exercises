@@ -1,6 +1,8 @@
 # More non-recursive exercises...
 
 def add_nums_to_words(str)
+  return str if str.strip.empty?
+  
   words = str.split(" ")
   num = words.count + 1
   words.map do |word|
