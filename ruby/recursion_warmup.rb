@@ -41,7 +41,6 @@ def add_nums_to_words(str)
 end
 # There has got to be a better way to do this! ^
 
-
 def combine_sorted_lists(arr1, arr2)
   i, j = 0, 0
   result = []
