@@ -27,16 +27,20 @@ end
 # More non-recursive exercises...
 
 def add_nums_to_words(str)
-  words = str.split(/\s+/)
+  words = str.strip.split(/\s+/)
   spaces = str.split(/\w+/)
-  num = words.count + 1
-  words.map! do |word|
+  num = words.count
+  result = ""
+  until words.empty? || spaces.empty?
+    result += "#{spaces.shift}#{words.shift}#{num}"
     num -= 1
-    !word.empty? ? "#{word}#{num}#{spaces[-num]}" : "#{word}#{spaces[-num]}"
-  end.join
+  end
+  result += spaces[0] unless spaces.empty?
+  result += "#{words.first}#{num}" unless words.empty?
+  result
 end
+# There has got to be a better way to do this! ^
 
-# p add_nums_to_words("   hi    my name   is  alex  ")
 
 def combine_sorted_lists(arr1, arr2)
   i, j = 0, 0
