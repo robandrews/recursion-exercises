@@ -9,7 +9,7 @@ def iter_fibs(num):
         arr.append(arr[-1] + arr[-2])
     return arr
     
-print iter_fibs(20)
+# print iter_fibs(20)
     
 def recurs_fibs(num):
     if num == 0: return []
@@ -19,4 +19,4 @@ def recurs_fibs(num):
     fibs.append(fibs[-1] + fibs[-2])
     return fibs
     
-print recurs_fibs(20)
+# print recurs_fibs(20)
